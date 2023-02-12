@@ -8,7 +8,5 @@ Vagrant.configure("2") do |config|
     config.vm.synced_folder ".", "/home/vagrant/dev"
     config.vm.provision "shell", inline: <<-SHELL
         sudo dnf update -y
-        sudo dnf install qemu-system-x86 qemu-img -y
-        sudo dnf install podman -y
     SHELL
 end
