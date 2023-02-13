@@ -14,5 +14,11 @@ Vagrant.configure("2") do |config|
         sudo runuser -l vagrant -c "git clone https://github.com/crc-org/crc.git"
         sudo runuser -l vagrant -c "cd crc && make"
         sudo cp /home/vagrant/go/bin/crc /usr/bin/.
+        sudo runuser -l vagrant -c "podman machine init"
+        sudo runuser -l vagrant -c "podman machine start"
+        sudo runuser -l vagrant -c "crc config set preset podman"
+        sudo runuser -l vagrant -c "crc setup"
+        sudo runuser -l vagrant -c "crc start"
+        sudo runuser -l vagrant -c "eval $(crc podman-env)"
     SHELL
 end
