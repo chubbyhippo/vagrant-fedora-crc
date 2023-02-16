@@ -5,7 +5,7 @@ Windows Hypervisor Platform
 Windows Sandbox  
 ## For win10 virtualbox
 ```
-VBoxManage modifyvm <VirtualMachineName> --nested-hw-virt on
+VBoxManage.exe modifyvm <VirtualMachineName> --nested-hw-virt on
 ```
 ## Run this in the cmd as an Admin
 ```
