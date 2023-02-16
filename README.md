@@ -7,3 +7,7 @@ Windows Sandbox
 ```
 bcdedit /set hypervisorlaunchtype off
 ```
+### Turn it back on
+```
+bcdedit /set hypervisorlaunchtype auto
+```
